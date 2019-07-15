@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HeaderGeneric = (props) => (
+const HeaderGeneric = ({title, description}) => (
     <header id="header">
-        <h1>Generic</h1>
-        <p>Ipsum dolor sit amet nullam</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
     </header>
 )
 
