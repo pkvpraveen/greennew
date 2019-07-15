@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ad61b8a7d6b231d33bee.js"
+    "url": "webpack-runtime-0b06db85e85d756f7444.js"
   },
   {
-    "url": "app-73e7612073219497d1ad.js"
+    "url": "app-2c3c865d1f256a0f49b0.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-ed8b4d2fa700d0e1c034.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a8ffc357aec7b83507f0ee21c8b8c304"
+    "revision": "f43162c14d6e1a6d25dfd66bb5431844"
   },
   {
-    "url": "styles.6a4f9ff736ac3a331b84.css"
+    "url": "styles.93265bd6bf3794f0c6b6.css"
   },
   {
     "url": "styles-d17e3551b5250156d0ca.js"
@@ -49,11 +49,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "f90b5d23620fa9247be3e7c5d32860e8"
+    "revision": "afb4bc32a6deca65bdd49eb81d19aaf9"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "5fe5fff597dd7385fc046ea880b177c8"
+    "revision": "7cb6055f32c4d530c5b048666f396dc3"
   },
   {
     "url": "manifest.webmanifest",
@@ -79,7 +79,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/greennew/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -151,7 +151,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `${pathname}`
+        return `/greennew${pathname}`
       } else {
         return pathname
       }
